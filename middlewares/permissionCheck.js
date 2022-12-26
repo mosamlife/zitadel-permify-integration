@@ -15,6 +15,7 @@ const getPermifyConfig = ({
       metadata: {
         schema_version: process.env.PERMIFY_SCHEMA_VERSION,
         snap_token: snapToken,
+        depth: 20,
       },
       entity: {
         type: entityType,
@@ -25,7 +26,6 @@ const getPermifyConfig = ({
         type: "user",
         id: userId,
       },
-      depth: 20,
     },
   };
 };
