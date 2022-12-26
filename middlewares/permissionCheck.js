@@ -12,8 +12,10 @@ const getPermifyConfig = ({
     method: "POST",
     url: `${process.env.PERMIFY_URL_ENDPOINT}/v1/permissions/check`,
     data: {
-      schema_version: process.env.PERMIFY_SCHEMA_VERSION,
-      snap_token: snapToken,
+      metadata: {
+        schema_version: process.env.PERMIFY_SCHEMA_VERSION,
+        snap_token: snapToken,
+      },
       entity: {
         type: entityType,
         id: entityId,
